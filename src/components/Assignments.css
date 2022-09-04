@@ -1,0 +1,37 @@
+.Ass_page{
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: 50px;
+    
+  }
+ 
+  .heading{
+    display: grid;
+    font-size: x-large;
+    font-weight: bold;
+    justify-content: start;
+    margin: 3vh 0vh 3vh 13%;
+  }
+  .card{
+    border: 1px solid rgb(194, 186, 186);
+    
+  }
+
+  .card_flex{
+    display: flex;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    justify-content: space-between;
+  }
+.button{
+    margin-right: 3vh;
+    background-color:rgb(0, 100, 0);
+    height: 25px;
+    padding: 0vh 1vh 0vh 1vh;
+    color: white;
+    
+}
+.card:hover{
+    background-color: rgb(245, 245, 245);
+}
+  

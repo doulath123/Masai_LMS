@@ -8,6 +8,8 @@ import {
   MenuItem
 } from '@chakra-ui/react'
 import {ChevronDownIcon} from '@chakra-ui/icons';
+import Lectures from './Lectures';
+import Assignments from './Assignments';
 
 
 function Nav() {
@@ -27,6 +29,7 @@ function Nav() {
         <Link to="/messages">Messages</Link>
         <Link to="/electives">Electives</Link>
         <Link to="/courses">Courses</Link>
+        <Link to="/admin">Admin</Link>
       </div>
       
       <div className='Nav_HeaderRight'>
@@ -50,4 +53,6 @@ function Nav() {
   )
 }
 
-export default Nav
+
+
+export default Nav;
