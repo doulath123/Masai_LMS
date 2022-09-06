@@ -42,7 +42,7 @@ function Nav() {
       <MenuList>
       
       <Link to="/profile"><MenuItem>Profile</MenuItem></Link>
-        <Link to="/logout"> <MenuItem >Log Out</MenuItem></Link>
+        <Link to="/login"> <MenuItem >Log Out</MenuItem></Link>
       </MenuList>
     </>
  

@@ -1,0 +1,68 @@
+.loginlogo{
+    height: 20vh;
+  
+}
+.logincontiner{
+  
+    display: grid;
+    justify-items: center;
+   margin-top: 20vh;
+   
+   
+}
+.inputheading{
+    display: grid;
+    justify-content: start;
+}
+.loginform{
+    display: grid;
+    box-shadow: 0px 5px  10px rgb(184, 180, 180);
+    padding: 0vh 5vh 3vh 5vh ;
+    border-radius: 1vh;
+    margin-top: 1vh;
+    justify-content: center;
+}
+.loginputbar{
+    border: 1px solid gray;
+    
+    height: 5vh;
+    width: 50vh;
+    margin-top: 1px;
+    border-radius: 1vh;
+}
+
+.LoginInputBox{
+    margin-top: 2vh;
+}
+.Loginchechdiv{
+    display: flex;
+    margin-top: 2vh;
+    justify-content: start;
+}
+.checkbox{
+ margin-right: 1vh; 
+}
+.forgotandbutton{
+    display: flex;
+    justify-content: end;
+    margin-top: 2vh;
+}
+.forgotpass{
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 1vh;
+}
+.loginbutton{
+    background-color: black;
+    color: white;
+    padding: 1vh 3vh 1vh 3vh;
+    border-radius: 1vh;
+    margin-left: 2vh;
+}
+.signupbutton{
+    background-color: black;
+    color: white;
+    margin-top: 2vh;
+    padding: 1vh 3vh 1vh 3vh;
+    border-radius: 1vh;
+}
