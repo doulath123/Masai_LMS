@@ -9,8 +9,6 @@ import Admin from './components/Admin';
 import CreateAssignment from './components/Assignmentform';
 import Lecturesform from './components/Lecturesform';
 import PrivateRoute from './components/PrivateRoute';
-
-// import AllPages from './components/AllPages';
 import Sinup from './components/Sinup';
 import { AuthContext } from './Context/AuthContext';
 

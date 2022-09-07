@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './Nav.css'
 import {Link} from 'react-router-dom'
 import {
@@ -8,11 +8,19 @@ import {
   MenuItem
 } from '@chakra-ui/react'
 import {ChevronDownIcon} from '@chakra-ui/icons';
-import Lectures from './Lectures';
-import Assignments from './Assignments';
+import { AuthContext } from '../Context/AuthContext';
 
 
 function Nav() {
+  const [state, dispatch]=useContext(AuthContext)
+  const logout=()=>{
+     
+    dispatch({
+      type:"LOGOUT_SUCCESS",
+      
+    })
+    console.log("res",state.isAuth)
+  }
   return (
     <div className='NavContiner'>
       <Link to="/dashbord"><img className='NavLogo' src='https://masai-website-images.s3.ap-south-1.amazonaws.com/1_a_YM_Gzz227i_Of_A08vt0_m_Jw_486f01ccaa.png'/></Link>
@@ -42,7 +50,7 @@ function Nav() {
       <MenuList>
       
       <Link to="/profile"><MenuItem>Profile</MenuItem></Link>
-        <Link to="/login"> <MenuItem >Log Out</MenuItem></Link>
+        <Link to="/login" onClick={logout}> <MenuItem >Log Out</MenuItem></Link>
       </MenuList>
     </>
  

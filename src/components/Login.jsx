@@ -1,10 +1,27 @@
 // import axios from 'axios'
-import React, {useContext} from 'react'
+import React, {useContext, useState, useEffect} from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import { AuthContext } from '../Context/AuthContext'
+import db from './firebaseconfig';
 import "./Login.css";
 
 function Login() {
+  const [user,setUser]=useState([]);
+  useEffect(()=>{
+    
+    const unsubscribe=  db.collection("Users").onSnapshot(snapshot=>(
+          setUser(snapshot.docs.map(doc =>({
+              id:doc.id,
+              data:doc.data()
+          })
+          ))
+      ))
+      return ()=>{
+          unsubscribe();
+      }
+      
+  },[])
+  console.log(user)
     const [state, dispatch]=useContext(AuthContext)
     console.log( "state",state)
     const loginUser=()=>{
