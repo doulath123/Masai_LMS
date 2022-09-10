@@ -1,5 +1,6 @@
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 import { Navigate } from 'react-router-dom';
+import { AuthContext } from '../Context/AuthContext';
 import db from './firebaseconfig';
 
 function Sinup() {
@@ -15,11 +16,20 @@ function Sinup() {
         value=e.target.value
         setUserlist({...userlist, [name]:value})
     };
+    const [state, dispatch]=useContext(AuthContext)
     const Register=(e)=>{
         e.preventDefault();
         db.collection("Users").add({userlist})
-        alert('R')
+        alert('Registered Successfull')
+        dispatch({
+            type:"LOGIN_SUCCESS",
+            
+          })
        
+    }
+    if(state.isAuth)
+    {
+        return <Navigate to='/'/>
     }
   return (
     <div className='logincontiner'>

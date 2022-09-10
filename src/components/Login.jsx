@@ -6,6 +6,18 @@ import db from './firebaseconfig';
 import "./Login.css";
 
 function Login() {
+  const [preuser, setPreuser]=useState({
+    email:"",
+    password:""
+
+  })
+  let name, value
+    const Handlechange = (e) => {
+        name=e.target.name
+        value=e.target.value
+        setPreuser({ ...preuser, [name]: value });
+       
+    };
   const [user,setUser]=useState([]);
   useEffect(()=>{
     
@@ -21,15 +33,33 @@ function Login() {
       }
       
   },[])
-  console.log(user)
+  console.log("doulath",user[0])
     const [state, dispatch]=useContext(AuthContext)
     console.log( "state",state)
-    const loginUser=()=>{
-     
-      dispatch({
+    
+    const loginUser=(e)=>{
+      e.preventDefault();
+      var p=0;
+      for(var i=0;i<user.length;i++)
+      {
+        if(preuser.email==user[i].data.userlist.email&&preuser.password==user[1].data.userlist.password){
+          alert('Login is Successfull')
+          p++
+          dispatch({
             type:"LOGIN_SUCCESS",
             
           })
+        }
+     
+      }
+      if(p==0)
+      {
+        alert("Enter detiles currectly")
+      }
+      console.log("orguser login email", user[1].data.userlist.email)
+      console.log("clicking login button",preuser.email)
+     
+      
     }
 
     
@@ -44,12 +74,12 @@ function Login() {
 <form className='loginform' onSubmit={loginUser}>
 <div className='LoginInputBox'>
                 <label className='inputheading'>Email</label> 
-                <input className='loginputbar' type="mail"  required />
+                <input className='loginputbar' type="mail" name='email' onChange={Handlechange}  value={preuser.email}   required />
             </div>
 
             <div className='LoginInputBox'>
                 <label className='inputheading'>Password</label> 
-                <input className='loginputbar' type="password"  required />
+                <input className='loginputbar' type="password" name='password' onChange={Handlechange}  value={preuser.password} required />
             </div>
             <div className='Loginchechdiv'>
             <input className='checkbox' type="checkbox" />
