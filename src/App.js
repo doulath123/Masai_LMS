@@ -11,6 +11,7 @@ import Lecturesform from './components/Lecturesform';
 import PrivateRoute from './components/PrivateRoute';
 import Sinup from './components/Sinup';
 import { AuthContext } from './Context/AuthContext';
+import Dashboard from './components/Dashboard';
 
 function App() {
   const [state, dispatch]=useContext(AuthContext)
@@ -23,6 +24,7 @@ function App() {
         <Route path='/lectures' element={<Lectures/>}/>
         <Route path='/assignments' element={<Assignments/>}/>
         <Route path='/admin' element={<Admin/>}/>
+        <Route path='/dashboard' element={<Dashboard/>}/>
         <Route path='/Admin/CreateAssignment' element={<CreateAssignment/>}/>
         <Route path='/Admin/CreateLectures' element={<Lecturesform/>}/>
         <Route path='/' element={<PrivateRoute><Lectures/></PrivateRoute>}></Route>

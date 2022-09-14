@@ -33,9 +33,9 @@ function Login() {
       }
       
   },[])
-  console.log("doulath",user[0])
+  
     const [state, dispatch]=useContext(AuthContext)
-    console.log( "state",state)
+    
     
     const loginUser=(e)=>{
       e.preventDefault();
@@ -65,7 +65,7 @@ function Login() {
     
     if(state.isAuth)
     {
-        return <Navigate to='/'/>
+        return <Navigate to='/dashboard'/>
     }
   return (
   

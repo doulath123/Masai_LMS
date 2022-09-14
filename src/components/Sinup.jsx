@@ -29,7 +29,7 @@ function Sinup() {
     }
     if(state.isAuth)
     {
-        return <Navigate to='/'/>
+        return <Navigate to='/dashboard'/>
     }
   return (
     <div className='logincontiner'>
