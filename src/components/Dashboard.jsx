@@ -37,7 +37,7 @@ console.log(formattedToday)
                           <p style={{fontSize:'22px', color:'#4F46E5',fontWeight:'500'}}>{`Scrum - ${formattedToday}`}</p> 
                         </div>
                         <div>
-                          <p ><span style={{fontWeight:'500'}}>Sibin O</span> Starting at 09:00 AM </p>
+                          <p ><span style={{fontWeight:'500'}}>Nrupul Dev</span> Starting at 09:00 AM </p>
                           <div style={{display:'flex',alignItems:'center',gap:'10px'}}> 
                             <div style={{backgroundColor:'#DBEAFE',padding:'0 5px',borderRadius:'5px'}}>SCRUM</div>
                             <div style={{backgroundColor:'#DCFCE7',padding:'0 5px',borderRadius:'5px'}}>LIVE</div>

@@ -1,4 +1,4 @@
-// import axios from 'axios'
+
 import React, {useContext, useState, useEffect} from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import { AuthContext } from '../Context/AuthContext'
@@ -39,10 +39,12 @@ function Login() {
     
     const loginUser=(e)=>{
       e.preventDefault();
+      console.log(user)
       var p=0;
       for(var i=0;i<user.length;i++)
       {
-        if(preuser.email==user[i].data.userlist.email&&preuser.password==user[1].data.userlist.password){
+        
+        if(preuser.email==user[i].data.userlist.email && preuser.password==user[i].data.userlist.password){
           alert('Login is Successfull')
           p++
           dispatch({
